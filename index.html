@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" sizes="1920x1920" href="images/logo.png">
+    <link rel="icon" href="/path/to/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.17.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>GHCCI</title>
+    <style>
+        body {
+            background: url('images/b5.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            /* Fix the background image */
+            background-color: black;
+            font-family: 'Gasoek One', sans-serif;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            z-index: -1;
+            filter: blur(8px);
+            /* Add the blur effect */
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.75);
+            font-size: smaller;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .navbar-nav .nav-link {
+            position: relative;
+            padding-bottom: 8px;
+            /* Adjust as needed */
+        }
+
+        .navbar-nav .nav-link::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #fff;
+            /* Adjust the underline color as needed */
+            transition: width 0.3s ease;
+        }
+
+        .navbar-nav .nav-link.active::before {
+            width: 100%;
+        }
+
+        .navbar-nav .nav-link:hover::before {
+            width: 100%;
+        }
+
+        .about,
+        .service {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 10px;
+        }
+
+        .faith {
+            font-family: 'Courier New', Courier, monospace;
+            list-style-type: none;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .about-content {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        @media (max-width: 991px) {
+
+            .sidebar {
+                background-color: rgb(255, 255, 255, 0.15);
+                backdrop-filter: blur(10px);
+            }
+
+            body {
+                background: url('images/b5.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-attachment: fixed;
+                /* Fix the background image */
+                background-color: black;
+                font-family: 'Gasoek One', sans-serif;
+            }
+
+            body::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: inherit;
+                z-index: -1;
+                filter: blur(8px);
+                /* Add the blur effect */
+            }
+
+            section {
+                background-image: url('../images/b5.jpg');
+                backdrop-filter: blur(5px);
+            }
+
+            nav {
+                font-size: smaller;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            .navbar-nav .nav-link::before {
+                content: "";
+                display: block;
+                width: 0;
+                height: 2px;
+                background-color: #fff;
+                /* Adjust the underline color as needed */
+                transition: width 0.3s ease;
+            }
+
+            .navbar-nav .nav-link:hover::before {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script src="script/index.js" defer></script>
+</head>
+
+<body class="vh-100 overfloww-hidden">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+        <div class="container">
+            <!-- Logo -->
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand fs-4" href="#">
+                    <div class="d-flex align-items-center">
+                        <img src="images/logo.png" alt="Logo" height="40" class="d-inline-block align-top">
+                        <div class="ms-2"> <!-- Margin start for spacing -->
+                            <span class="d-block d-lg-none"> <!-- Visible on small screens -->
+                                GHCCI SJDM
+                            </span>
+                            <span class="d-none d-lg-block"> <!-- Hidden on small screens -->
+                                Glorious Hope Christian Center Int'l
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Toggle button-->
+            <button id="sidebarToggle" class="navbar-toggler shadow-none border-0" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <!-- SideBar -->
+            <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <!-- SideBar Header -->
+                <div class="offcanvas-header text-white border-bottom">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Glorious Hope Christian Center Int'l</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+
+                <!-- SideBar Body -->
+                <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#faith">Faith</a>
+                        </li>
+                    </ul>
+
+                    <!-- Login/ Signup -->
+                    <div
+                        class="admin d-flex flex-column justify-content-center flex-lg-row align-items-center gap-3 mb-3">
+                        <a href="view/adminLogin.php" class="text-white">
+                            <i class="fas fa-user-shield me-2"></i> Admin
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </nav>
+
+    <main>
+        <section id="home" style="position: relative; overflow: hidden;">
+            <!-- Content -->
+            <div class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center text-white fs-1"
+                style="position: relative; z-index: 1;">
+                <h1 style="font-size: 1.5em" class="text-center text-lg-start fs-bold">Glorious Hope Christian Center
+                    Int'l</h1>
+                <p style="font-size: .5em">Be our member now! and click amen below</p>
+                <div>
+                    <a href="view/disclaimer.php" type="button" class="btn btn-outline-light">Amen</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" style="position: relative; overflow: hidden;">
+            <!-- Content -->
+            <div class="w-100 vh-100 d-flex flex-column justify-content-center align-items-center text-white"
+                style="position: relative; z-index: 1;">
+                <h4>SUNDAY SERVICE</h4>
+                <p class="service text-center fs-3" style="font-size: 2.5em text-center">9:00am -
+                    11:00am</p>
+                <h4>BIBLE STUDY</h4>
+                <p class="service text-center fs-3" style="font-size: 2.5em text-center text-lg-start">
+                    Wednesday, 7:00pm - 9:00pm</p>
+                <h4>PRAYER NIGHT</h4>
+                <p class="service text-center fs-3" style="font-size: 2.5em text-center text-lg-start">
+                    Friday, 7:00pm - 9:00pm</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" style="position: relative; overflow: hidden;">
+            <!-- Content with details -->
+            <div class="about-content" style="position: relative; z-index: 1;">
+                <div class="mission-vision">
+                    <h4 class="fs-4 text-uppercase">Vision</h4>
+                    <p class="about fs-5">We envision people to be good and faithful disciples of Christ.</p>
+
+                    <h4 class="fs-4 text-uppercase">Mission</h4>
+                    <p class="about fs-5">To connect the disconnected into a Christ-centered community.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statement Faith Section -->
+        <section id="faith" style="position: relative; overflow: hidden;">
+            <div class="faith-content" style="text-align: center; z-index: 1;">
+                <br><br><br><br>
+                <h2 class="fs-3 text-uppercase text-center">16 Fundamental Truths</h2>
+            </div><br>
+            <ul class="faith">
+                <li class="text-center">The Scriptures inspired</li>
+                <li class="text-center">The One True God</li>
+                <li class="text-center">The deity of the Lord Jesus Christ</li>
+                <li class="text-center">The fall of man</li>
+                <li class="text-center">The salvation of man</li>
+                <li class="text-center">The ordinances of the Holy Spirit</li>
+                <li class="text-center">The baptism in the Holy Spirit</li>
+                <li class="text-center">The initial physical evidence of the baptism of the Holy Spirit</li>
+                <li class="text-center">Sanctification</li>
+                <li class="text-center">The church and its mission</li>
+                <li class="text-center">The ministry</li>
+                <li class="text-center">Divine healing</li>
+                <li class="text-center">The blessed hope</li>
+                <li class="text-center">The millennial reign if Christ</li>
+                <li class="text-center">The final judgement</li>
+                <li class="text-center">The new heavens and the new earth</li>
+            </ul>
+            </div>
+        </section>
+    </main>
+
+    <div class="footer bg-transparent text-white text-center py-3 fixed-bottom">
+        <div class="social">
+            <a href="https://www.facebook.com/GloriousHopeSJ" target="_blank"><i
+                    class="fab fa-facebook-f me-3 text-white"></i></a>
+            <a href="https://www.instagram.com/glorioushopesj/?fbclid=IwAR2w9MvCMuYj972D6CvutNkAbHOlLT3LOFTG1FiazRRwLgCeYBjvTSKbjrc"
+                target="_blank"><i class="fab fa-instagram me-3 text-white"></i></a>
+            <a href="mailto:glorioushopesj@gmail.com" target="_blank"><i class="fab fa-google me-3 text-white"></i></a>
+        </div>
+    </div>
+</body>
+
+</html>
